@@ -1,6 +1,8 @@
 .container {
     width: 90%;
     margin: 0 auto;
+    padding-top: 15pt;
+    padding-bottom: 10pt;
 }
 
 #question {
@@ -15,3 +17,39 @@
 h1 {
     text-align: center;
 }
+
+p {
+    text-align: center;
+}
+
+#nba-header {
+    width: 20%;
+    display: block;
+    margin: 0 auto;
+}
+
+header {
+    background-color: #006bb7;
+}
+
+#main-container {
+    margin-top: 5%;
+    margin-bottom: 5%;
+    background-color: #006bb7;
+    color: #fff;
+}
+
+.btn {
+    background-color: #ed174b;
+    color: #fff;
+}
+
+.btn:hover {
+    color: #fff;
+    background-color: #ed174b;
+}
+
+#answers {
+    margin-top: 10px;
+}
+
