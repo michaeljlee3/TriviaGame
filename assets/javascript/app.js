@@ -38,7 +38,7 @@ var trivia = [
     },
 
     {
-    question: "What city belongs to two NBA teams?",
+    question: "What city is the home to two NBA teams?",
     answers: ["New York", "Los Angeles", "Miami", "Chicago"],
     correctAnswer: 1
     },
@@ -71,6 +71,7 @@ var trivia = [
 $("#start-button").on("click", function(){
     $(this).hide();
     newGame();
+    
 });
 
 function newGame() {
@@ -84,83 +85,100 @@ function newGame() {
     displayQuestion();
 }
 
+function shotclock(){
+	seconds = 24;
+	$('#shotclock').html(":" + seconds);
+	time = setInterval(displayShotclock, 1000);
+}
+
+function displayShotclock(){
+	seconds--;
+	$('#shotclock').html(':' + seconds);
+	if(seconds < 1){
+        clearInterval(time);
+        currentQuestion++;
+        $('#answers').html("");
+        displayQuestion();
+	}
+}
 
 function displayQuestion() {
-
+    
     if (currentQuestion < 10) {
+
+        shotclock();
 
         switch (currentQuestion) {
         
-            case currentQuestion = 0: 
-                $("#question").text(trivia[0].question);
-                for (i = 0; i < trivia[0].answers.length; i++) {
-                $("#answers").append("<div class='row'><button type='button' class='btn btn-primary answer-btn' data-index='" + i + "'>" + trivia[0].answers[i] + "</button></div>")
-                }
-                break;
+        case currentQuestion = 0: 
+            $("#question").text(trivia[0].question);
+            for (i = 0; i < trivia[0].answers.length; i++) {
+            $("#answers").append("<div class='row'><button type='button' class='btn btn-primary answer-btn' data-index='" + i + "'>" + trivia[0].answers[i] + "</button></div>")
+            }
+            break;
 
-            case currentQuestion = 1: 
-                $("#question").text(trivia[1].question);
-                for (i = 0; i < trivia[1].answers.length; i++) {
-                $("#answers").append("<div class='row'><button type='button' class='btn btn-primary answer-btn' data-index='" + i + "'>" + trivia[1].answers[i] + "</button></div>")
-                }
-                break;
+        case currentQuestion = 1: 
+            $("#question").text(trivia[1].question);
+            for (i = 0; i < trivia[1].answers.length; i++) {
+            $("#answers").append("<div class='row'><button type='button' class='btn btn-primary answer-btn' data-index='" + i + "'>" + trivia[1].answers[i] + "</button></div>")
+            }
+            break;
 
-            case currentQuestion = 2: 
-                $("#question").text(trivia[2].question);
-                for (i = 0; i < trivia[2].answers.length; i++) {
-                $("#answers").append("<div class='row'><button type='button' class='btn btn-primary answer-btn' data-index='" + i + "'>" + trivia[2].answers[i] + "</button></div>")
-                }
-                break;
+        case currentQuestion = 2: 
+            $("#question").text(trivia[2].question);
+            for (i = 0; i < trivia[2].answers.length; i++) {
+            $("#answers").append("<div class='row'><button type='button' class='btn btn-primary answer-btn' data-index='" + i + "'>" + trivia[2].answers[i] + "</button></div>")
+            }
+            break;
 
-            case currentQuestion = 3: 
-                $("#question").text(trivia[3].question);
-                for (i = 0; i < trivia[3].answers.length; i++) {
-                $("#answers").append("<div class='row'><button type='button' class='btn btn-primary answer-btn' data-index='" + i + "'>" + trivia[3].answers[i] + "</button></div>")
-                }
-                break;
+        case currentQuestion = 3: 
+            $("#question").text(trivia[3].question);
+            for (i = 0; i < trivia[3].answers.length; i++) {
+            $("#answers").append("<div class='row'><button type='button' class='btn btn-primary answer-btn' data-index='" + i + "'>" + trivia[3].answers[i] + "</button></div>")
+            }
+            break;
 
-            case currentQuestion = 4: 
-                $("#question").text(trivia[4].question);
-                for (i = 0; i < trivia[4].answers.length; i++) {
-                $("#answers").append("<div class='row'><button type='button' class='btn btn-primary answer-btn' data-index='" + i + "'>" + trivia[4].answers[i] + "</button></div>")
-                }
-                break;
+        case currentQuestion = 4: 
+            $("#question").text(trivia[4].question);
+            for (i = 0; i < trivia[4].answers.length; i++) {
+            $("#answers").append("<div class='row'><button type='button' class='btn btn-primary answer-btn' data-index='" + i + "'>" + trivia[4].answers[i] + "</button></div>")
+            }
+            break;
 
-            case currentQuestion = 5: 
-                $("#question").text(trivia[5].question);
-                for (i = 0; i < trivia[5].answers.length; i++) {
-                $("#answers").append("<div class='row'><button type='button' class='btn btn-primary answer-btn' data-index='" + i + "'>" + trivia[5].answers[i] + "</button></div>")
-                }
-                break;
+        case currentQuestion = 5: 
+            $("#question").text(trivia[5].question);
+            for (i = 0; i < trivia[5].answers.length; i++) {
+            $("#answers").append("<div class='row'><button type='button' class='btn btn-primary answer-btn' data-index='" + i + "'>" + trivia[5].answers[i] + "</button></div>")
+            }
+            break;
 
-            case currentQuestion = 6: 
-                $("#question").text(trivia[6].question);
-                for (i = 0; i < trivia[6].answers.length; i++) {
-                $("#answers").append("<div class='row'><button type='button' class='btn btn-primary answer-btn' data-index='" + i + "'>" + trivia[6].answers[i] + "</button></div>")
-                }
-                break;
+        case currentQuestion = 6: 
+            $("#question").text(trivia[6].question);
+            for (i = 0; i < trivia[6].answers.length; i++) {
+            $("#answers").append("<div class='row'><button type='button' class='btn btn-primary answer-btn' data-index='" + i + "'>" + trivia[6].answers[i] + "</button></div>")
+            }
+            break;
 
-            case currentQuestion = 7: 
-                $("#question").text(trivia[7].question);
-                for (i = 0; i < trivia[7].answers.length; i++) {
-                $("#answers").append("<div class='row'><button type='button' class='btn btn-primary answer-btn' data-index='" + i + "'>" + trivia[7].answers[i] + "</button></div>")
-                }
-                break;
+        case currentQuestion = 7: 
+            $("#question").text(trivia[7].question);
+            for (i = 0; i < trivia[7].answers.length; i++) {
+            $("#answers").append("<div class='row'><button type='button' class='btn btn-primary answer-btn' data-index='" + i + "'>" + trivia[7].answers[i] + "</button></div>")
+            }
+            break;
 
-            case currentQuestion = 8: 
-                $("#question").text(trivia[8].question);
-                for (i = 0; i < trivia[8].answers.length; i++) {
-                $("#answers").append("<div class='row'><button type='button' class='btn btn-primary answer-btn' data-index='" + i + "'>" + trivia[8].answers[i] + "</button></div>")
-                }
-                break;
+        case currentQuestion = 8: 
+            $("#question").text(trivia[8].question);
+            for (i = 0; i < trivia[8].answers.length; i++) {
+            $("#answers").append("<div class='row'><button type='button' class='btn btn-primary answer-btn' data-index='" + i + "'>" + trivia[8].answers[i] + "</button></div>")
+            }
+            break;
 
-            case currentQuestion = 9: 
-                $("#question").text(trivia[9].question);
-                for (i = 0; i < trivia[9].answers.length; i++) {
-                $("#answers").append("<div class='row'><button type='button' class='btn btn-primary answer-btn' data-index='" + i + "'>" + trivia[9].answers[i] + "</button></div>")
-                }
-                break;
-            
+        case currentQuestion = 9: 
+            $("#question").text(trivia[9].question);
+            for (i = 0; i < trivia[9].answers.length; i++) {
+            $("#answers").append("<div class='row'><button type='button' class='btn btn-primary answer-btn' data-index='" + i + "'>" + trivia[9].answers[i] + "</button></div>")
+            }
+            break; 
         }
     } else {
         alert("Game Over!")
@@ -168,18 +186,20 @@ function displayQuestion() {
         $("#answers").html("<div class='row'><button type='button' class='btn btn-primary startover-btn'>Start Over</button></div>")
         $("#correct").text("Correct: " + correct)
         $("#incorrect").text("Incorrect: " + incorrect)
-        } 
+    } 
     
     $('.answer-btn').click(function() {
                 userSelect = $(this).data('index');
                 checkAnswer();
             }); 
+
     $('.startover-btn').click(function() {
         newGame();
     });
 }
 
 function checkAnswer() {
+    
     correctAnswer = trivia[currentQuestion].correctAnswer;
 
     if (userSelect == correctAnswer) {
