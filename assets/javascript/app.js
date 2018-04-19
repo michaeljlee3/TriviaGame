@@ -85,7 +85,7 @@ function newGame() {
     displayQuestion();
 }
 
-function shotclock(){
+/* function shotclock(){
 	seconds = 24;
 	$('#shotclock').html(":" + seconds);
 	time = setInterval(displayShotclock, 1000);
@@ -100,13 +100,13 @@ function displayShotclock(){
         $('#answers').html("");
         displayQuestion();
 	}
-}
+} */
 
 function displayQuestion() {
     
     if (currentQuestion < 10) {
 
-        shotclock();
+        //shotclock();
 
         switch (currentQuestion) {
         
